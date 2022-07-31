@@ -1,0 +1,32 @@
+  
+{% extends 'index.html' %}
+
+{% block content %}
+
+  <form action=" " method="POST" >
+        
+        {% csrf_token %}
+        <p class="h1 text-info bg-dark pb-2 ps-2 rounded-3"> Blog entry form </h1>
+        <div class="bg-black rounded-3" style="width: 65rem; height: 37rem">
+
+          <div><br></div>
+          <div class="px-4 py-2 bg-info text-dark ">
+            <label class=" fst-italic fw-bold " for="title">Title: </label>
+            <input class=" " id="title" type="text" name="title"  style="width: 30rem;">
+          </div>
+          <div><br></div>
+          <div class="px-4 pb-2 bg-warning text-dark fst-italic">
+            <label class=" fst-italic fw-bold " for="post">Post discription: </label>
+            <input class=" "id="post" type="text" name="post" style="width: 62rem ; height: 25rem">
+          </div>
+          <br>
+          <input class="btn bg-info fw-bold ms-2 mb-10" type="submit">
+
+        </div>
+        <br>
+        <br>
+        <a class="btn bg-info fw-bold " href="{%url 'home' %}">blog pages</a>
+    
+      </form>
+
+{% endblock %}
